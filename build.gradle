@@ -1,0 +1,20 @@
+apply plugin: 'java'
+
+version = '0.1.0'
+
+jar {
+    manifest {
+        attributes 'Implementation-Title': 'Sample Currency Handling',
+                   'Implementation-Version': version
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile  ('org.mockito:mockito-core:1.10.19'){  exclude group: 'org.hamcrest' }
+    compile ('junit:junit:4.12'){}
+}
+
